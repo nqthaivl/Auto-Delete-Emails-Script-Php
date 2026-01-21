@@ -33,7 +33,3 @@ Dự án này giúp tự động xóa các email cũ hơn một khoảng thời 
 ```cron
 */30 * * * * /usr/bin/php /path/to/script/delete_emails.php >> /path/to/script/logfile.log 2>&1
 ```
-
-## Lưu ý bảo mật
-*   File `config.php` đã được thêm vào `.gitignore` để tránh lộ mật khẩu khi push code.
-*   Không bao giờ commit file `config.php` chứa mật khẩu thật lên GitHub.
