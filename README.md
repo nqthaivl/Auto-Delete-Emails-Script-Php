@@ -11,7 +11,7 @@ Dự án này giúp tự động xóa các email cũ hơn một khoảng thời 
 
 1.  **Clone repository**:
     ```bash
-    git clone https://github.com/yourusername/repo-name.git
+    git clone https://github.com/nqthaivl/Auto-Delete-Emails-Script-Php.git  
     cd repo-name
     ```
 
