@@ -1,0 +1,14 @@
+# Sensitive config
+config.php
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.log
+*.tmp
+
+# Extension intermediate files
+extension/generate_icons.py

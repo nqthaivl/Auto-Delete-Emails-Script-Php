@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      width: 320px;
+      padding: 15px;
+      background-color: #f8fafc;
+      color: #334155;
+    }
+    h2 {
+      margin-top: 0;
+      color: #475569;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid #cbd5e1;
+      padding-bottom: 8px;
+    }
+    .form-group {
+      margin-bottom: 12px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    input[type="text"], input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    .time-inputs {
+      display: flex;
+      gap: 5px;
+    }
+    .time-inputs > div {
+      flex: 1;
+    }
+    .time-label {
+      font-size: 11px;
+      color: #64748b;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 5px;
+      transition: background 0.2s;
+    }
+    #btnSave {
+      background-color: #0ea5e9;
+      color: white;
+      margin-bottom: 8px;
+    }
+    #btnSave:hover { background-color: #0284c7; }
+    #btnStop {
+      background-color: #ef4444;
+      color: white;
+    }
+    #btnStop:hover { background-color: #dc2626; }
+    #status {
+      margin-top: 10px;
+      font-size: 12px;
+      text-align: center;
+      min-height: 18px;
+    }
+    .success { color: #10b981; }
+    .error { color: #ef4444; }
+    .running { color: #f59e0b; font-weight: bold; }
+    .stopped { color: #94a3b8; }
+  </style>
+</head>
+<body>
+  <h2>Cấu hình Auto Run</h2>
+  
+  <div class="form-group">
+    <label for="url">Đường dẫn (URL) cần chạy:</label>
+    <input type="text" id="url" placeholder="https://example.com/delete_emails.php">
+  </div>
+
+  <div class="form-group">
+    <label>Thời gian lặp lại:</label>
+    <div class="time-inputs">
+      <div>
+        <input type="number" id="hours" min="0" value="0">
+        <div class="time-label">Giờ</div>
+      </div>
+      <div>
+        <input type="number" id="minutes" min="0" value="30">
+        <div class="time-label">Phút</div>
+      </div>
+      <div>
+        <input type="number" id="seconds" min="0" value="0">
+        <div class="time-label">Giây</div>
+      </div>
+    </div>
+  </div>
+
+  <button id="btnSave">LƯU & BẮT ĐẦU CHẠY</button>
+  <button id="btnStop">DỪNG LẠI</button>
+
+  <div id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
